@@ -1,0 +1,85 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Moodify - Mood Based Music Player</title>
+  <link rel="stylesheet" href="style.css" />
+  <script defer src="script.js"></script>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet"/>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(to right top, #a18cd1, #fbc2eb);
+      background-attachment: fixed;
+      color: #333;
+    }
+    .container {
+      text-align: center;
+      padding: 4rem 1rem;
+    }
+    h1 {
+      font-size: 3rem;
+      margin-bottom: 0.5rem;
+    }
+    p {
+      font-size: 1.2rem;
+      margin-bottom: 2rem;
+    }
+    .mood-buttons button {
+      margin: 0.5rem;
+      padding: 0.75rem 1.5rem;
+      font-size: 1rem;
+      border: none;
+      border-radius: 8px;
+      background-color: #fff;
+      color: #555;
+      cursor: pointer;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      transition: transform 0.2s ease;
+    }
+    .mood-buttons button:hover {
+      transform: scale(1.05);
+    }
+    footer {
+      text-align: center;
+      padding: 2rem 1rem;
+      background-color: rgba(255,255,255,0.5);
+      margin-top: 4rem;
+    }
+    footer a {
+      color: #333;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    #emoji-container {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      pointer-events: none;
+      z-index: -1;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Moodify <span>🎧</span></h1>
+    <p>Select your mood and let the music flow ✨</p>
+    <div class="mood-buttons">
+      <button onclick="window.open('https://open.spotify.com/playlist/37i9dQZF1DXdPec7aLTmlC', '_blank')"><i class="fas fa-smile"></i> Happy</button>
+      <button onclick="window.open('https://open.spotify.com/playlist/37i9dQZF1DWVrtsSlLKzro', '_blank')"><i class="fas fa-sad-tear"></i> Sad</button>
+      <button onclick="window.open('https://open.spotify.com/playlist/37i9dQZF1DX8FwnYE6PRvL', '_blank')"><i class="fas fa-bolt"></i> Energetic</button>
+      <button onclick="window.open('https://open.spotify.com/playlist/37i9dQZF1DX3Ogo9pFvBkY', '_blank')"><i class="fas fa-moon"></i> Calm</button>
+    </div>
+    <div id="quote"></div>
+  </div>
+  <div id="emoji-container"></div>
+  <footer>
+    <p>Made with ❤️ by Bhargavi | <a href="https://github.com/bhagi16" target="_blank">GitHub</a> | <a href="https://linkedin.com/in/bhargavi-btech" target="_blank">LinkedIn</a></p>
+  </footer>
+</body>
+</html>
